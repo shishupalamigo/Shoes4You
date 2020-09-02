@@ -9,6 +9,7 @@ body {
     margin: 0 ;
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
+    background-image: url(../images/shoes-12.jpg);
 }
 
 img { 
@@ -77,7 +78,11 @@ section {
     line-height: 1;
     color: #17353d;
     margin-bottom: 3rem;
+    text-transform: uppercase;
 } 
+.our-title {
+color: rgba(9, 230, 218, 0.911);
+}
 .hero {
     color: #fff;
     text-align: center;
@@ -87,7 +92,7 @@ section {
 @supports (background-blend-mode: multiply) {
     .hero {
     background:
-            url(../Shoes4You/images/shoes-06.jpg),
+            url(../images/shoes-06.jpg),
             radial-gradient(#444, #111);
     background-blend-mode: multiply;
     background-attachment: fixed;
@@ -98,12 +103,26 @@ section {
 }
 .featured {
     background: #eee;
+    width: 85%;
+    margin: 0 auto;
 }
 .featured-item {
     display: block;
     position: relative;
     transform: scale(.85);
     transition: transform 250ms ease-in-out;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    line-height: 1.2;
+}
+.price {
+    display: block;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.featured-item img {
+    border-radius: 50%;
 }
 .featured-item:hover,
 .featured-item:focus {
@@ -112,7 +131,76 @@ section {
 .featured-item::after {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
     padding: 100% 100% 0 0;
     border-radius: 50%;
     background: #2193b0;
+    opacity: .2;
+    z-index: 0;
+}
+.featured_details {
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+.featured-item:hover .featured_details,
+.featured-item:focus .featured_details:focus {
+    opacity: 1;
+    text-shadow: 0 0 2em rgba(255, 255, 255, 0.9) ;
+}
+
+.product {
+    background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+    padding: 3em 0em;
+    border-radius: 1em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+.product_image {
+    transform: scale(1.17);
+    margin: -6em 0 0 0;
+}
+
+@media screen and (min-width: 45em) {
+    .product {
+        text-align: left;
+        padding-left: 2em;
+    }
+
+    .product_image {
+        float: right;
+        width: 65%;
+        margin: -7em 0 0 0;
+        shape-outside: url(../Shoes4You/images/red.png);
+        /* shape-margin: 1em; */
+    }
+    .shoe-yellow {
+        height: 75vh;
+    }
+}
+.product_title {
+    font-size: clamp(3rem, 5vh + 1rem, 4rem);
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 0 .2rem rgba(0, 0, 0, .2);
+    line-height: 1.1;   
+}
+
+.hero {
+    --clr-accent: #faa700;
+}
+.shoe-brown {
+    --clr-inner: rgb(25, 167, 32);
+    --clr-outer: rgb(212, 195, 34);
+    --clr-accent: rgb(112, 62, 5);
+}
+.shoe-red {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+}
+.shoe-yellow {
+    --clr-inner: rgb(47, 27, 226);
+    --clr-outer: rgb(14, 207, 182);
+    --clr-accent: rgb(161, 159, 7);
 }
