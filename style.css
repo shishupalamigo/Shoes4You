@@ -9,7 +9,7 @@ body {
     margin: 0 ;
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
-    background-image: url(../images/shoes-12.jpg);
+    background-image: url(../Shoes4You/images/shoes-12.jpg);
 }
 
 img { 
@@ -92,7 +92,7 @@ color: rgba(9, 230, 218, 0.911);
 @supports (background-blend-mode: multiply) {
     .hero {
     background:
-            url(../images/shoes-06.jpg),
+            url(../Shoes4You/images/shoes-06.jpg),
             radial-gradient(#444, #111);
     background-blend-mode: multiply;
     background-attachment: fixed;
@@ -160,6 +160,11 @@ color: rgba(9, 230, 218, 0.911);
     transform: scale(1.17);
     margin: -6em 0 0 0;
 }
+@media only screen and (max-width: 1024px) and (min-width: 750px) {
+.shoe-yellow  {
+    height: 25vh;
+}
+}
 
 @media screen and (min-width: 45em) {
     .product {
@@ -172,7 +177,6 @@ color: rgba(9, 230, 218, 0.911);
         width: 65%;
         margin: -7em 0 0 0;
         shape-outside: url(../Shoes4You/images/red.png);
-        /* shape-margin: 1em; */
     }
     .shoe-yellow {
         height: 75vh;
